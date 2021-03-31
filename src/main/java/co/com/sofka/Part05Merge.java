@@ -11,15 +11,16 @@ import reactor.core.publisher.Mono;
  */
 public class Part05Merge {
 
+	//flux1 y flux2?
 	public Flux<User> mergeFluxWithInterleave(Flux<User> all, Flux<User> all1) {
-		return null;
+		return all.mergeWith(all1);
 	}
 
 	public Flux<User> mergeFluxWithNoInterleave(Flux<User> all, Flux<User> all1) {
-		return null;
+		return all.concatWith(all1);
 	}
 
 	public Flux<User> createFluxFromMultipleMono(Mono<User> skylerMono, Mono<User> marieMono) {
-		return null;
+		return Flux.concat(skylerMono, marieMono);
 	}
 }
