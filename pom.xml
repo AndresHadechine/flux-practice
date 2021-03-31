@@ -61,7 +61,12 @@
 			<artifactId>assertj-core</artifactId>
 			<version>3.15.0</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.4.4</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
