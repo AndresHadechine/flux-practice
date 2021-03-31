@@ -10,18 +10,18 @@ public class Part02Mono {
 
 
 	public Mono<String> emptyMono() {
-		return null;
+		return Mono.empty();
 	}
 
 	public Mono<String> monoWithNoSignal() {
-		return null;
+		return Mono.never();
 	}
 
 	public Mono<String> fooMono() {
-		return null;
+		return Mono.just("foo");
 	}
 
 	public Mono<String> errorMono() {
-		return null;
+		return Mono.error( new IllegalStateException() );
 	}
 }
